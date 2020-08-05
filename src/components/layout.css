@@ -1,5 +1,5 @@
 :root {
-  --mainBrown: #2d1ef1;
+  --mainBrown: #2d1e1f;
   --mainYellow: #ff9e09;
   --mainGrey: #ece8dc;
   --mainWhite: #fff;
@@ -21,27 +21,33 @@ h6 {
   font-family: "Courier New", Courier, monospace !important;
   letter-spacing: 0.25rem !important;
 }
+
 .text-yellow {
   color: var(--mainYellow) !important;
 }
+
 /* .title {
   letter-spacing: 0.3rem;
   font-weight: 400;
 } */
+
 .cart-icon {
   cursor: pointer;
   color: var(--mainYellow);
   font-size: 2rem;
 }
-/* .btn-yellow {
+.btn-yellow {
   color: var(--mainYellow) !important;
   border-color: var(--mainYellow) !important;
 }
+
 .btn-yellow:hover {
   background: var(--mainYellow) !important;
   color: var(--mainDark) !important;
 }
-.default-background {
+
+.default-background,
+.about-background {
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -51,22 +57,18 @@ h6 {
   background-size: cover;
   background-attachment: fixed;
 }
+
 .about-background {
   min-height: 60vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(rgba(255, 158, 9, 0.5), rgba(255, 158, 9, 0.5));
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
 }
+/*
 .menu {
   background: var(--mainGrey);
 }
 .contact {
   background: var(--mainGrey);
 }
+*/
 .footer {
-  background: var(--mainDark);
-} */
+  background: var(--mainBrown);
+}
