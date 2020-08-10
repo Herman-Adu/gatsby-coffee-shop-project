@@ -1,6 +1,6 @@
 import React from "react"
-import { Link } from "gatsby"
 import Title from "../Globals/Title"
+import { Link } from "gatsby"
 
 export default function Info() {
   return (
@@ -17,7 +17,7 @@ export default function Info() {
               laboriosam! Unde autem nesciunt beatae, facere illum rerum
               corporis nihil, sint, commodi in debitis quia.
             </p>
-            <Link to="/about">
+            <Link to="/about/">
               <button className="btn text-uppercase btn-yellow">
                 about page
               </button>
