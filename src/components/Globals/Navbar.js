@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import logo from "../../images/logo.svg"
 import { FaCartArrowDown } from "react-icons/fa"
 
-export default class extends Component {
+export default class Navbar extends Component {
   state = {
     navbarOPen: false,
     css: "collapse navbar-collapse",

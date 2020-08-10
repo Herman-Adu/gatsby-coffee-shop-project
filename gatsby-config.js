@@ -3,9 +3,9 @@ require("dotenv").config({
 })
 module.exports = {
   siteMetadata: {
-    title: "Regular Joe's",
-    description: "This is Regular Joe's online Coffee Store.",
-    author: "@Adudev",
+    title: `Regular Joe's`,
+    description: `This is Regular Joe's online Coffee Store.`,
+    author: `@Adudev`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -26,13 +26,13 @@ module.exports = {
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
     },
-    // {
-    //   resolve: "gatsby-plugin-snipcart",
-    //   options: {
-    //     apiKey: process.env.SNIPCART_APIKEY,
-    //     autopop: true,
-    //   },
-    // },
+    {
+      resolve: "gatsby-plugin-snipcart",
+      options: {
+        apiKey: process.env.SNIPCART_APIKEY,
+        autopop: true,
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
