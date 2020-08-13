@@ -91,7 +91,7 @@ export default class Menu extends Component {
             <div className="col-10 col-sm-8 mx-auto text-center">
               <Link to="/menu/">
                 <button className="btn text-uppercase btn-yellow">
-                  menu page
+                  full menu
                 </button>
               </Link>
             </div>
