@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import BackgroundSection from "../components/Globals/BackgroundSection"
-import Menu from "../components/Home/Menu"
+import Menu from "../components/Globals/Menu"
 import { Link } from "gatsby"
 
 const MenuPage = ({ data }) => {
