@@ -1,44 +1,36 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
-
+import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import BackgroundSection from "../components/Globals/BackgroundSection"
-import Info from "../components/Home/Info"
 import Menu from "../components/Home/Menu"
-import Products from "../components/Home/Products"
-import Contact from "../components/Home/Contact"
+import { Link } from "gatsby"
 
-const IndexPage = ({ data }) => {
+const MenuPage = ({ data }) => {
   return (
     <Layout>
-      <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+      <SEO title="Coffee Meun" />
       <BackgroundSection
         img={data.img.childImageSharp.fluid}
-        title="regular joe's"
-        styleClass="default-background"
+        title=""
+        styleClass="menu-background"
       />
-      <Info />
       <Menu items={data.menu} />
-      <Products />
-      <Contact />
     </Layout>
   )
 }
 
 export const query = graphql`
   {
-    img: file(relativePath: { eq: "default-background.jpeg" }) {
+    img: file(relativePath: { eq: "menu-background.jpeg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_tracedSVG
         }
       }
     }
-    menu: allContentfulCoffeeItem(
-      filter: { featured: { eq: true } }
-      sort: { fields: category, order: ASC }
-    ) {
+
+    menu: allContentfulCoffeeItem(sort: { fields: category, order: ASC }) {
       edges {
         node {
           id
@@ -50,14 +42,13 @@ export const query = graphql`
           category
           image {
             fixed(width: 50, height: 50) {
-              src
+              ...GatsbyContentfulFixed_tracedSVG
             }
           }
-          featured
         }
       }
     }
   }
 `
 
-export default IndexPage
+export default MenuPage

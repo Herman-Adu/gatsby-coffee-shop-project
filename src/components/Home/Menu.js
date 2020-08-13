@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import Title from "../Globals/Title"
 import Img from "gatsby-image"
+import { Link } from "gatsby"
 
 const getCategories = items => {
   let tempItems = items.map(item => {
@@ -41,7 +42,7 @@ export default class Menu extends Component {
       return (
         <section className="menu py-5">
           <div className="container">
-            <Title title="our menu" />
+            <Title title="best of our menu" />
             {/* categories */}
             <div className="row mb-5">
               <div className="col-10  mx-auto text-center">
@@ -86,6 +87,13 @@ export default class Menu extends Component {
                   </div>
                 )
               })}
+            </div>
+            <div className="col-10 col-sm-8 mx-auto text-center">
+              <Link to="/menu/">
+                <button className="btn text-uppercase btn-yellow">
+                  menu page
+                </button>
+              </Link>
             </div>
           </div>
         </section>

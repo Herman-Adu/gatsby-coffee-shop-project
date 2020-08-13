@@ -47,7 +47,8 @@ h6 {
 }
 
 .default-background,
-.about-background {
+.about-background,
+.menu-background {
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -58,7 +59,8 @@ h6 {
   background-attachment: fixed;
 }
 
-.about-background {
+.about-background,
+.menu-background {
   min-height: 60vh;
 }
 
